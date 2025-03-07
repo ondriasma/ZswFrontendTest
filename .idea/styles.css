@@ -1,12 +1,26 @@
+:root {
+    --background: #f1f0e9;
+    --darkgreen: #0d4715;
+    --font: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+    background-color: var(--background);
+}
+
+
 .custom-navbar {
     /*background-color: darkgreen;*/
-    background-color: #0d4715;
+    background-color: var(--darkgreen);
+    border-radius: 25px 25px 0px 0px !important;
+    margin: 20px 15px 10px; !important;
+    background: linear-gradient(to bottom, var(--darkgreen) 90%, var(--background) 100%);
 }
 
 .custom-link {
     color: white !important;
     font-size: 20px !important;
-    font-family: Georgia, serif;
+    font-family: var(--font);
     padding-right: 20px;
     border-right: 2px solid #ccc;
     border-left: 2px solid #ccc;
@@ -15,6 +29,11 @@
 
 .custom-link:hover {
     text-decoration: underline;
+}
+
+#logo{
+    /*top right bottom left, hodnoty top a bottom určují výšku navbaru*/
+    margin: 8px 20px 15px 10px;
 }
 
 .search-bar{
@@ -32,7 +51,7 @@
 #userDropdown{
     color: white !important;
     font-size: 20px !important;
-    font-family: Georgia, serif;
+    font-family: var(--font);
 }
 
 #userAvatar {
@@ -45,7 +64,7 @@
 
 #userName{
     font-size: 18px !important;
-    font-family: Georgia, serif;
+    font-family: var(--font);
     white-space: nowrap;
 }
 
@@ -58,14 +77,14 @@
 #userStatus{
     color: dimgray;
     font-size: 16px !important;
-    font-family: Georgia, serif;
+    font-family: var(--font);
     white-space: nowrap;
 }
 
 #schoolName{
     color: grey !important;
     font-size: 14px !important;
-    font-family: Georgia, serif;
+    font-family: var(--font);
     white-space: nowrap;
 }
 
@@ -83,6 +102,34 @@
 
 }
 
+.text-element{
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    text-align: center !important;
+    font-family: var(--font);
+    border-bottom: 2px solid var(--darkgreen);
+}
+
+.scroll-container {
+    display: flex;
+    /*overflow-x: auto;*/
+    gap: 10px;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    overflow-x: hidden; /* Hide the scrollbar */
+    -ms-overflow-style: none;  /* For IE and Edge */
+    scrollbar-width: none;  /* For Firefox */
+}
+
+.window {
+    width: 500px;
+    height: 350px;
+}
+
+.window:focus {
+    outline: none;
+    box-shadow: none;
+}
 
 @media (max-width: 991px) {
 
