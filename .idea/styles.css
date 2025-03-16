@@ -11,10 +11,13 @@ body {
 
 .custom-navbar {
     /*background-color: darkgreen;*/
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
     background-color: var(--darkgreen);
     border-radius: 25px 25px 0px 0px !important;
-    margin: 20px 15px 10px; !important;
-    background: linear-gradient(to bottom, var(--darkgreen) 90%, var(--background) 100%);
+    margin: 20px 4vw 10px; !important;
+    background: linear-gradient(to bottom, var(--darkgreen) 90%, rgba(255,0,0,0));
 }
 
 .custom-link {
@@ -102,16 +105,31 @@ body {
 
 }
 
-.text-element{
-    margin-left: 15px !important;
-    margin-right: 15px !important;
+.welcome-user{
+    width: 90vw;
+    margin: 0 auto;
     text-align: center !important;
+    font-family: var(--font);
+    border-bottom: 2px solid var(--darkgreen);
+    background-color: red !important;
+}
+
+.text-element{
+    width: 80vw;
+    margin: 0 auto;
+    text-align: left;
     font-family: var(--font);
     border-bottom: 2px solid var(--darkgreen);
 }
 
+.container-fluid{
+    width: 80vw;
+    margin: 0 auto;
+}
+
 .scroll-container {
     display: flex;
+    border-radius: 10px;
     /*overflow-x: auto;*/
     gap: 10px;
     scroll-behavior: smooth;
@@ -122,13 +140,21 @@ body {
 }
 
 .window {
-    width: 500px;
-    height: 350px;
+    width: 650px;
+    height: 500px;
 }
 
 .window:focus {
     outline: none;
     box-shadow: none;
+}
+
+.footer {
+    background-color: var(--darkgreen);
+    color: white;
+    font-family: var(--font);
+    text-align: center;
+    margin: 40px 5vw 20px; !important;
 }
 
 @media (max-width: 991px) {
@@ -137,6 +163,11 @@ body {
         border-right: none;
         border-left: none;
 
+    }
+
+    .custom-navbar {
+        /*margin: 20px 5vw 10px; !important;*/
+        padding-bottom: 40px !important;
     }
 
     .navbar-nav {
@@ -148,6 +179,16 @@ body {
         /*width: 30%;*/
         margin: 15px;
 
+    }
+
+    .text-element{
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .container-fluid{
+        width: 90vw;
+        margin: 0 auto;
     }
 
 }
