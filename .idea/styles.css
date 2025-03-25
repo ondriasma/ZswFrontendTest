@@ -15,18 +15,19 @@ body {
     top: 0 !important;
     z-index: 1000 !important;
     background-color: var(--darkgreen);
-    border-radius: 25px 25px 0px 0px !important;
-    margin: 20px 4vw 10px; !important;
+    /*border-radius: 8px 8px 0px 0px !important;*/
+    margin: 0px 0vw 10px; !important;
     background: linear-gradient(to bottom, var(--darkgreen) 90%, rgba(255,0,0,0));
 }
 
 .custom-link {
     color: white !important;
-    font-size: 20px !important;
+    text-align: center;
+    font-size: 18px !important;
     font-family: var(--font);
     padding-right: 20px;
-    border-right: 2px solid #ccc;
-    border-left: 2px solid #ccc;
+    /*border-right: 2px solid #ccc;
+    border-left: 2px solid #ccc;*/
 
 }
 
@@ -36,7 +37,7 @@ body {
 
 #logo{
     /*top right bottom left, hodnoty top a bottom určují výšku navbaru*/
-    margin: 8px 20px 15px 10px;
+    margin: 0px 20px 8px 10px;
 }
 
 .search-bar{
@@ -101,8 +102,8 @@ body {
     background-color: red !important;
 }
 
-.nav-item {
-
+.nav-item:hover {
+    background-color: var(--background);
 }
 
 .welcome-user{
@@ -110,8 +111,7 @@ body {
     margin: 0 auto;
     text-align: center !important;
     font-family: var(--font);
-    border-bottom: 2px solid var(--darkgreen);
-    background-color: red !important;
+    background-color: var(--background) !important;
 }
 
 .text-element{
@@ -122,14 +122,23 @@ body {
     border-bottom: 2px solid var(--darkgreen);
 }
 
+.text-element h1{
+    font-size: 28px !important;
+}
+
 .container-fluid{
     width: 80vw;
     margin: 0 auto;
 }
 
+.btn{
+    background-color: var(--darkgreen);
+}
+
 .scroll-container {
     display: flex;
-    border-radius: 10px;
+    background-color: var(--darkgreen);
+    border-radius: 4px;
     /*overflow-x: auto;*/
     gap: 10px;
     scroll-behavior: smooth;
@@ -140,8 +149,12 @@ body {
 }
 
 .window {
-    width: 650px;
-    height: 500px;
+    width: 333px;
+    height: 233px;
+    height: 28vw;
+    width: 40vw;
+    max-width: 500px;
+    max-height: 350px;
 }
 
 .window:focus {
@@ -154,7 +167,7 @@ body {
     color: white;
     font-family: var(--font);
     text-align: center;
-    margin: 40px 5vw 20px; !important;
+    margin: 40px 0vw 10px; !important;
 }
 
 @media (max-width: 991px) {
@@ -167,7 +180,8 @@ body {
 
     .custom-navbar {
         /*margin: 20px 5vw 10px; !important;*/
-        padding-bottom: 40px !important;
+        padding-bottom: 15px !important;
+        background: linear-gradient(to bottom, var(--darkgreen) 97%, rgba(255,0,0,0));
     }
 
     .navbar-nav {
@@ -177,6 +191,7 @@ body {
 
     .search-bar{
         /*width: 30%;*/
+        min-width: 350px;
         margin: 15px;
 
     }
